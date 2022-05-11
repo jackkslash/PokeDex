@@ -1,27 +1,16 @@
-import { useQuery } from "react-query";
 import logo from "./logo.svg";
-import axios from "axios";
-import { PokemonCard } from "./components/PokemonCard";
+import { ReactDOM } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home/Home";
 
 function App() {
-  const { isLoading, isError, data, error} = useQuery("repoData", () =>
-    axios.get("https://pokeapi.co/api/v2/pokemon").then((res) => res.data)
-  );
-
-  if (isLoading) return <>"Loading..."</>;
-
-  if (error) return <>"An error has occurred: "</>;
-
-  const mapResults = data.results.map((results : any) => 
-  {
-    return <><PokemonCard name={results.name}/></>
-    
-  })
-
   return (
-    <div>
-      {mapResults}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />}>
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
