@@ -12,7 +12,7 @@ export const Home = () => {
 
   if (error) return <>"An error has occurred: "</>;
 
-  const mapResults = data.results.map((results: any, index: number) => {
+  const mapResults = data.results.map((results: any, index: string) => {
     return (
       <>
         <PokemonCard props={results} index={index}/>
@@ -20,7 +20,7 @@ export const Home = () => {
     );
   });
 
-  return <>{mapResults}</>;
+  return <div className="pt-2">{mapResults}</div>;
 };
 
 export default Home;

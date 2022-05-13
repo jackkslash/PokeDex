@@ -3,7 +3,11 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
 ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        pkmn: ["PKMN", "sans-serif"]
+      }
+    },
   },
   plugins: [require("daisyui")],
 }
