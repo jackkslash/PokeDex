@@ -19,7 +19,7 @@ export const PokemonCard = ({
       </figure>
       <div className="card-body">
         <h2 className="card-title capitalize justify-center pb-2">
-          {pokemon} : {index + 1}/803
+          {pokemon} {index + 1}/803
         </h2>
         <div className="card-actions justify-center">
           <Link to={"/Details/"+pokemon} state={pokemon}>
