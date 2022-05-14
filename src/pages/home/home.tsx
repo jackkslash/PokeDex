@@ -20,7 +20,7 @@ export const Home = () => {
     );
   });
 
-  return <div className="pt-2">{mapResults}</div>;
+  return <div className="pt-2 flex flex-wrap max-w-7xl justify-center mx-auto">{mapResults}</div>;
 };
 
 export default Home;
