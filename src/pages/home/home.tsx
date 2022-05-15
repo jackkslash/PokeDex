@@ -4,8 +4,9 @@ import axios from "axios";
 import { PokemonCard } from "../../components/PokemonCard";
 
 export const Home = () => {
+  
   const { isLoading, isError, data, error } = useQuery("pokemonData", () =>
-    axios.get("https://pokeapi.co/api/v2/pokemon").then((res) => res.data)
+    axios.get("https://pokeapi.co/api/v2/pokemon?offset="+{}+"&limit=20").then((res) => res.data)
   );
 
   if (isLoading) return <>"Loading..."</>;

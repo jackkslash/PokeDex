@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       fontFamily:{
         pkmn: ["PKMN", "sans-serif"]
-      }
+      },
+      colors:{
+        "red": "#d3363f",
+      },
     },
   },
   plugins: [require("daisyui")],
