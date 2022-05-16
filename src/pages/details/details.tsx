@@ -2,6 +2,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { QueryCache, useQuery } from "react-query";
 import axios from "axios";
 import { GetImageById } from "../../util/Utils";
+import styles from "styles.css"
 
 export const Details = (LinkProps: any) => {
   const location = useLocation();
